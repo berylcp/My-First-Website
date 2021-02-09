@@ -137,3 +137,28 @@
         grid-area: footerCopyright;
     }
 }
+
+@media only screen and (max-width: 415px) {
+
+    /* Footer Container */
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 105px 1fr;
+        grid-template-areas:
+            "footerContact footerSocials"
+            "footerCopyright footerCopyright";
+    }
+
+    .footerContactMe {
+        grid-area: footerContact;
+    }
+
+    .footerSocialLinks {
+        grid-area: footerSocials;
+    }
+
+    .footerCopyright {
+        grid-area: footerCopyright;
+    }
+}
