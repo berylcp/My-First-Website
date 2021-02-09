@@ -1,0 +1,67 @@
+@media only screen and (max-width: 768px) {
+
+    /* Main Container */
+    .containerLarge {
+        margin: 30px;
+        padding: 25px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        grid-template-rows: 100px 460px 100px;
+        grid-template-areas:
+            "header header header"
+            "content content content"
+            "footer footer footer";
+    }
+
+    .header-wrapper {
+        grid-area: header;
+    }
+
+    .content-wrapper {
+        grid-area: content;
+    }
+
+    .footer-wrapper {
+        grid-area: footer;
+    }
+
+    /* Content Container */
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "post post sidebar";
+    }
+
+    .content-wrapper .post-wrapper {
+        grid-area: post;
+    }
+
+    .content-wrapper .sidebar-wrapper {
+        grid-area: sidebar;
+    }
+
+    /* Footer Container */
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 120px 1fr;
+        grid-template-areas:
+            "footerContact footerSocials"
+            "footerCopyright footerCopyright";
+    }
+
+    .footerContactMe {
+        grid-area: footerContact;
+    }
+
+    .footerSocialLinks {
+        grid-area: footerSocials;
+    }
+
+    .footerCopyright {
+        grid-area: footerCopyright;
+    }
+}

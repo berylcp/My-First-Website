@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap'); */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #5cdb95;
+    color: #05386b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.noBulletNav {
+    list-style: none;
+}
+
+/* Main Container */
+.containerLarge {
+    margin: 40px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-rows: 90px 400px 100px;
+    grid-template-areas:
+        "header header header"
+        "content content content"
+        "footer footer footer";
+}
+
+.header-wrapper {
+    grid-area: header;
+}
+
+.content-wrapper {
+    grid-area: content;
+}
+
+.footer-wrapper {
+    grid-area: footer;
+}
+
+/* Content Container */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "post post sidebar";
+}
+
+.content-wrapper .post-wrapper {
+    grid-area: post;
+}
+
+.content-wrapper .sidebar-wrapper {
+    grid-area: sidebar;
+}
+
+/* Footer Container */
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 110px 1fr;
+    grid-template-areas:
+        "footerContact footerSocials"
+        "footerCopyright footerCopyright";
+}
+
+.footerContactMe {
+    grid-area: footerContact;
+}
+
+.footerSocialLinks {
+    grid-area: footerSocials;
+}
+
+.footerCopyright {
+    grid-area: footerCopyright;
+}
+
+/* Header */
+
+.header-wrapper .logo {
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #05386b;
+}
+
+.header-wrapper ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header-wrapper .navLink {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #05386b;
+}
+
+.header-wrapper .navLink:hover {
+    color: #379683;
+}
+
+.header-wrapper .headerDivider {
+    border-color: #05386b;
+    margin-top: 10px;
+}
+
+/* Post */
+.content-wrapper .post-wrapper .postCard {
+    padding: 10px;
+}
+
+.content-wrapper .post-wrapper .postCard .cardDivider {
+    border-color: #05386b;
+    margin-top: 10px;
+}
+
+.content-wrapper .post-wrapper .postCard .postReadMoreBtn {
+    margin-top: 10px;
+    padding: 5px;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #05386b;
+    border: 1px solid #05386b;
+    color: #edf5e1;
+}
+
+.content-wrapper .post-wrapper .postCard .postReadMoreBtn:hover {
+    background: #5cdb95;
+    color: #05386b;
+}
+
+/* Sidebar */
+.sidebar-wrapper .noBulletNav {
+    list-style: none;
+}
+
+.sidebar-wrapper .bulletNav {
+    list-style-position: inside;
+}
+
+.sidebar-wrapper .sideNavLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: #05386b;
+}
+
+.sidebar-wrapper .sideNavLink:hover {
+    color: #379683;
+}
+
+.sidebar-wrapper .sidebarSectionDivider {
+    border-color: #05386b;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer-wrapper .footerDivider {
+    border-color: #05386b;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-wrapper .footerSectionDivider {
+    border-color: #05386b;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-wrapper .phoneBtn {
+    color: #05386b;
+    text-decoration: none;
+}
+
+.footer-wrapper .phoneBtn:hover {
+    color: #379683;
+}
+
+.footer-wrapper .emailBtn {
+    color: #05386b;
+    text-decoration: none;
+}
+
+.footer-wrapper .emailBtn:hover {
+    color: #379683;
+}
+
+.footer-wrapper #socialLinksNav {
+    display: flex;
+}
+
+.footer-wrapper #socialLinksNav .socialLink {
+    margin-right: 20px;
+    font-size: 2rem;
+    color: #05386b;
+}
+
+.footer-wrapper #socialLinksNav .socialLink:hover {
+    color: #379683;
+}
+
+.footer-wrapper .footerCopyright {
+    text-align: center;
+}
