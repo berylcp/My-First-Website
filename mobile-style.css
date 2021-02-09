@@ -138,10 +138,10 @@
     }
 }
 
-@media only screen and (max-width: 415px) {
+/* @media only screen and (max-width: 415px) { */
 
-    /* Footer Container */
-    .footer-wrapper {
+/* Footer Container */
+/* .footer-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 105px 1fr;
@@ -160,5 +160,90 @@
 
     .footerCopyright {
         grid-area: footerCopyright;
+    }
+} */
+
+@media only screen and (max-width: 415px) {
+
+    * {
+        font-size: 96%;
+    }
+
+    /* Main Container */
+    .containerLarge {
+        margin: 0;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        grid-template-rows: 90px 500px 100px;
+        grid-template-areas:
+            "header header header"
+            "content content content"
+            "footer footer footer";
+    }
+
+    .header-wrapper {
+        grid-area: header;
+    }
+
+    .content-wrapper {
+        grid-area: content;
+    }
+
+    .footer-wrapper {
+        grid-area: footer;
+    }
+
+    /* Content Container */
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "post post"
+            "sidebar sidebar";
+    }
+
+    .content-wrapper .post-wrapper {
+        grid-area: post;
+    }
+
+    .content-wrapper .sidebar-wrapper {
+        grid-area: sidebar;
+    }
+
+    /* Footer Container */
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "footerContact"
+            "footerSocials"
+            "footerCopyright";
+    }
+
+    .footerContactMe {
+        grid-area: footerContact;
+    }
+
+    .footerSocialLinks {
+        grid-area: footerSocials;
+    }
+
+    .footerCopyright {
+        grid-area: footerCopyright;
+    }
+
+    /* Header */
+    .header-wrapper .navLink {
+        margin-right: 10px;
+    }
+
+    /* Sidebar */
+    .sidebarDivider {
+        border-color: #05386b;
+        margin-bottom: 10px;
     }
 }
